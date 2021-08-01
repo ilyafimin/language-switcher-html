@@ -1,0 +1,103 @@
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    height: 110px;
+    padding: 10px 0;
+    background-color: lavenderblush;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-menu {
+    position: relative;
+}
+
+.selected-lang {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    font-size: 1.2rem;
+    margin-top: 25px;
+    
+}
+
+.selected-lang::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(images/united-states.png);
+}
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+
+}
+
+.lang-menu ul li {
+    list-style: none;
+}
+.lang-menu ul li a::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.lang-menu ul li a {
+    text-decoration: none;
+    display: block;
+    width: 145px;
+    padding: 10px 10px;
+    color: #000;
+}
+.lang-menu ul li a:hover {
+    background-color: #f2f2f2;
+}
+
+/* Background for elements of switcher */
+
+.gr a::before {
+    background: url(images/germany.png);
+}
+
+.jp a::before {
+    background: url(images/japan.png);
+}
+
+.ru a::before {
+    background: url(images/russia.png);
+}
+
+.lang-menu:hover ul {
+    display: block;
+}
